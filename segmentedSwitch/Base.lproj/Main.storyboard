@@ -1,25 +1,150 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="segmentedSwitch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metalBgd" translatesAutoresizingMaskIntoConstraints="NO" id="igq-bR-t0S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="segmentedBgnd" translatesAutoresizingMaskIntoConstraints="NO" id="sEW-LE-m0m">
+                                <rect key="frame" x="36" y="122" width="248" height="41"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGF-1o-Ce0" userLabel="HomeButton">
+                                <rect key="frame" x="42" y="126" width="79" height="48"/>
+                                <animations/>
+                                <state key="normal" image="normalHome">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="pressedHome">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="pressedHome">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L33-Xk-5yD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSS-UQ-8zn" userLabel="BlogButton">
+                                <rect key="frame" x="121" y="126" width="79" height="48"/>
+                                <animations/>
+                                <state key="normal" image="normalBlog">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="pressedBlog">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="pressedBlog">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UbJ-ae-Xcb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-hV-ffi" userLabel="ProjectButton">
+                                <rect key="frame" x="200" y="126" width="79" height="48"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="normalProject">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="pressedProject">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="pressedProject">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dH-jS-UM7"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="displayContainer" translatesAutoresizingMaskIntoConstraints="NO" id="rrp-k3-emN">
+                                <rect key="frame" x="100" y="45" width="120" height="65"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGk-RL-ojH">
+                                <rect key="frame" x="107" y="67" width="106" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greyIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="60s-pG-E3D">
+                                <rect key="frame" x="133" y="182" width="54" height="59"/>
+                                <animations/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="aLk-iI-XqE">
+                                <rect key="frame" x="133" y="182" width="54" height="59"/>
+                                <animations/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-eJ-Zps">
+                                <rect key="frame" x="133" y="182" width="54" height="59"/>
+                                <animations/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="hN6-LH-O7b">
+                                <rect key="frame" x="133" y="182" width="54" height="59"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="igq-bR-t0S" secondAttribute="trailing" id="U8a-I0-Vag"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="igq-bR-t0S" secondAttribute="bottom" id="XWU-fk-YSt"/>
+                            <constraint firstItem="igq-bR-t0S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dyh-uj-TrJ"/>
+                            <constraint firstItem="igq-bR-t0S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l8N-Tx-XQy"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="blogBtn" destination="dSS-UQ-8zn" id="Fev-lI-5sn"/>
+                        <outlet property="displayContainer" destination="rrp-k3-emN" id="Bhn-M9-YFf"/>
+                        <outlet property="displayLabel" destination="PGk-RL-ojH" id="rQE-LA-GuF"/>
+                        <outlet property="greenIndicator" destination="KUx-eJ-Zps" id="lVY-tC-Joq"/>
+                        <outlet property="greyIndicator" destination="60s-pG-E3D" id="vn8-Vr-mHV"/>
+                        <outlet property="homeBtn" destination="yGF-1o-Ce0" id="9qI-IJ-0uL"/>
+                        <outlet property="metalBgd" destination="igq-bR-t0S" id="XNj-LL-PON"/>
+                        <outlet property="projectBtn" destination="bk6-hV-ffi" id="lwh-4r-oXg"/>
+                        <outlet property="redIndicator" destination="hN6-LH-O7b" id="FTq-QO-XoT"/>
+                        <outlet property="segmentedBgd" destination="sEW-LE-m0m" id="hfM-V9-gH1"/>
+                        <outlet property="whiteIndicator" destination="aLk-iI-XqE" id="b3V-e1-QPP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="286" y="340"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="displayContainer" width="414" height="225"/>
+        <image name="greenIndicator" width="108" height="118"/>
+        <image name="greyIndicator" width="108" height="118"/>
+        <image name="metalBgd" width="414" height="736"/>
+        <image name="normalBlog" width="120" height="73"/>
+        <image name="normalHome" width="120" height="73"/>
+        <image name="normalProject" width="120" height="73"/>
+        <image name="pressedBlog" width="120" height="73"/>
+        <image name="pressedHome" width="120" height="73"/>
+        <image name="pressedProject" width="120" height="73"/>
+        <image name="redIndicator" width="108" height="118"/>
+        <image name="segmentedBgnd" width="369" height="61"/>
+        <image name="whiteIndicator" width="108" height="118"/>
+    </resources>
 </document>
